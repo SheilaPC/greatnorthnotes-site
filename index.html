@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Great North Notes | Printable workbooks for money, health, home and what's next</title>
+<meta name="description" content="Proven systems for real life. Printable workbooks and fillable PDF trackers for money, health, home, and starting over. Made in Canada.">
+<meta property="og:title" content="Great North Notes">
+<meta property="og:description" content="Proven systems for real life. Printable workbooks and trackers for money, health, home and what's next.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://greatnorthnotes.ca">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23C79A4B'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%232A1B27'%3EGN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --plum:#4B2E44; --gold:#C79A4B; --cream:#F4EFE4; --ink:#2A1B27; --sand:#E9DFD9;
+  --muted:#4A3A46; --goldtext:#8A6A2E; --line:#C9BBB0;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Source Sans 3',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55}
+a{color:var(--plum)}
+a:hover{color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:24px}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance}
+h2{font-size:clamp(1.9rem,4vw,2.75rem);line-height:1.08;letter-spacing:-0.015em;font-weight:700}
+.eyebrow{font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--goldtext)}
+.on-dark .eyebrow,.eyebrow.gold{color:var(--gold)}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:15px 30px;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{color:var(--ink)}
+.btn-plum{background:var(--plum);color:var(--cream)}
+.btn-plum:hover{color:var(--cream)}
+.btn-ghost{color:var(--cream);border:2px solid var(--gold);padding:13px 28px}
+.btn-ghost:hover{color:var(--cream)}
+section{padding-block:88px}
+
+/* top bars */
+.announce{background:var(--ink);color:var(--sand);font-size:14px;letter-spacing:.04em}
+.announce .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;padding-block:9px}
+header{background:var(--plum);color:var(--cream)}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;padding-block:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream)}
+.brand:hover{color:var(--cream)}
+.mono{width:38px;height:38px;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:17px}
+.brand span.name{font-family:var(--display);font-weight:700;font-size:21px}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:16px}
+nav a{color:var(--cream);text-decoration:none}
+nav a.btn{padding:10px 20px;color:var(--ink)}
+
+/* hero */
+.hero{background:var(--plum);color:var(--cream);padding-block:64px 88px}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:48px 64px}
+.hero-copy{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.02;letter-spacing:-0.02em;font-weight:700}
+.hero p.lead{margin:0;max-width:34rem;font-size:20px;color:var(--sand)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:16px}
+.hero .small{font-size:15px;color:#CDBBC6}
+.hero-art{flex:1 1 340px;min-width:0;display:flex;justify-content:center}
+.stack{position:relative;width:100%;max-width:440px;aspect-ratio:1/1.02}
+.mini{position:absolute;aspect-ratio:3/4;padding:14px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 30px rgba(20,8,18,.35)}
+.mini .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.mini .t{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.05}
+.mini .r{height:3px;width:40px;background:var(--gold)}
+
+/* trust strip */
+.strip{border-bottom:1px solid #D8CCC0;padding-block:36px}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:28px 32px}
+.strip .item{flex:1 1 220px;min-width:0;display:flex;align-items:center;gap:14px;color:var(--plum)}
+.strip .item div{color:var(--ink);font-weight:600;line-height:1.25}
+.strip .item small{display:block;font-weight:400;color:var(--muted);font-size:16px}
+
+/* carousel */
+.head-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 32px;margin-bottom:40px}
+.head-row .t{display:flex;flex-direction:column;gap:10px}
+.ctrls{display:flex;align-items:center;gap:14px}
+.count{font-size:16px;color:var(--muted);min-width:56px;text-align:right}
+.arrow{width:48px;height:48px;border:2px solid var(--plum);background:transparent;color:var(--plum);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.arrow.next{background:var(--plum);color:var(--cream)}
+.viewport{overflow:hidden;background:var(--sand)}
+.track{display:flex;transition:transform .5s ease}
+.slide{flex:0 0 100%;min-width:0;padding:40px;display:flex;flex-wrap:wrap;align-items:center;gap:40px 64px}
+.cover-wrap{flex:0 1 320px;min-width:0;width:100%;max-width:320px;margin:0 auto}
+.cover{width:100%;aspect-ratio:3/4;padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:var(--bg);color:var(--fg);border:3px solid var(--edge);box-shadow:0 16px 34px rgba(42,27,39,.28)}
+.cover .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ac)}
+.cover .t{font-family:var(--display);font-weight:700;font-size:32px;line-height:1.02;letter-spacing:-0.01em}
+.cover .r{height:4px;width:56px;background:var(--ac);margin-bottom:10px}
+.cover .s{font-size:14px;opacity:.85}
+.details{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.details h3{font-size:clamp(1.6rem,3.4vw,2.25rem);line-height:1.1;font-weight:700}
+.details p{margin:0;color:#3B2A36}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{padding:11px 0;border-top:1px solid var(--line)}
+.facts li:last-child{border-bottom:1px solid var(--line)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.tab{cursor:pointer;font-family:inherit;font-size:15px;font-weight:600;padding:10px 16px;min-height:44px;border:2px solid var(--plum);background:transparent;color:var(--plum)}
+.tab.on{background:var(--plum);color:var(--cream)}
+
+/* videos */
+.videos{background:var(--plum);color:var(--cream)}
+.videos .intro{max-width:44rem;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.videos .intro p{margin:0;color:var(--sand)}
+.vgrid{display:flex;flex-wrap:wrap;gap:32px}
+.player{flex:2 1 480px;min-width:0;position:relative;display:block;aspect-ratio:16/9;background:var(--ink);color:var(--cream);text-decoration:none}
+.player:hover{color:var(--cream)}
+.player .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center}
+.player .vt{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,3vw,1.75rem);line-height:1.1}
+.player .vs{font-size:15px;color:#CDBBC6}
+.upnext{flex:1 1 300px;min-width:0}
+.upnext .lab{padding-bottom:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-top:1px solid #6E5166}
+.row b{display:block}
+.row span.n{font-size:15px;color:#CDBBC6}
+.chip{flex:0 0 auto;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--gold);border:1px solid var(--gold);padding:4px 10px}
+.upnext .foot{border-top:1px solid #6E5166;padding-top:24px}
+
+/* how, about, faq */
+.cards{display:flex;flex-wrap:wrap;gap:24px;margin-top:40px}
+.step{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:10px;padding:28px;background:var(--sand)}
+.step .n{font-family:var(--display);font-weight:700;font-size:44px;line-height:1;color:var(--plum)}
+.step .h{font-family:var(--display);font-weight:700;font-size:22px}
+.step p{margin:0;color:#3B2A36}
+.about{background:var(--sand)}
+.about .wrap{display:flex;flex-wrap:wrap;gap:48px 72px}
+.about .l{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;gap:22px}
+.about .l p{margin:0}
+.about .r{flex:1 1 320px;min-width:0}
+.val{padding:20px 0;border-top:1px solid #B9A9A0}
+.val b{display:block;font-family:var(--display);font-size:22px;color:var(--plum)}
+.val span{color:#3B2A36}
+.faq{display:flex;flex-wrap:wrap;gap:32px 48px;margin-top:40px}
+.faq div{flex:1 1 440px;min-width:0;padding-top:16px;border-top:3px solid var(--plum)}
+.faq h3{font-size:21px;font-weight:700;margin-bottom:8px}
+.faq p{margin:0;color:#3B2A36}
+.band{background:var(--plum);color:var(--cream);padding-block:64px}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 48px}
+.band .t{flex:1 1 400px;min-width:0}
+.band h2{font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.1}
+.band p{margin:8px 0 0;color:var(--sand)}
+
+footer{background:var(--ink);color:var(--sand);font-size:16px;padding-block:48px 32px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px 48px}
+footer .about-f{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:10px}
+footer .about-f p{margin:0;color:#B9A9B2;max-width:22rem}
+footer .cols{display:flex;flex-wrap:wrap;gap:32px 64px}
+footer .col{display:flex;flex-direction:column;gap:8px}
+footer .col h4{margin:0 0 4px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+footer a{color:var(--cream)}
+footer .legal{color:#B9A9B2;font-size:14px;padding-top:32px}
+
+@media (max-width:560px){.slide{padding:24px}section{padding-block:64px}}
+@media (prefers-reduced-motion:reduce){.track,.btn{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="announce"><div class="wrap"><span>Instant digital downloads</span><span>Fillable PDFs</span><span>Made in Canada</span></div></div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono">GN</span><span class="name">Great North Notes</span></a>
+    <nav aria-label="Main">
+      <a href="#products">Workbooks</a>
+      <a href="#videos">Videos</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a class="btn btn-gold" href="https://greatnorthnotes.etsy.com">Shop on Etsy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="padding-block:64px 88px">
+  <div class="wrap">
+    <div class="hero-copy on-dark">
+      <div class="eyebrow">Printable workbooks and trackers</div>
+      <h1>Proven systems for real life.</h1>
+      <p class="lead">Workbooks for money, health, home, and what comes next. Each one comes from a problem I lived through and solved myself.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://greatnorthnotes.etsy.com">Shop on Etsy</a>
+        <a class="btn btn-ghost" href="#products">Browse the workbooks</a>
+      </div>
+      <div class="small">Download instantly. Fill it in on screen or print it.</div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="stack">
+        <div class="mini" style="left:0;top:10%;width:50%;background:#E9DFD9;color:#4B2E44;transform:rotate(-7deg)"><div class="k" style="color:#8A6A2E">Great North Notes</div><div class="t">My Health Journey</div><div class="r"></div></div>
+        <div class="mini" style="right:0;top:6%;width:50%;background:#2A1B27;color:#F4EFE4;transform:rotate(6deg)"><div class="k" style="color:#C79A4B">Great North Notes</div><div class="t">The Grocery Spending Reset</div><div class="r"></div></div>
+        <div class="mini" style="left:22%;top:30%;width:56%;padding:18px;background:#F4EFE4;color:#4B2E44;border:3px solid #C79A4B;box-shadow:0 18px 38px rgba(20,8,18,.45)"><div class="k" style="color:#8A6A2E;font-size:11px">Great North Notes</div><div class="t" style="font-size:25px;line-height:1.02">The Retirement Reset</div><div><div class="r" style="width:48px;margin-bottom:8px"></div><div style="font-size:12px;color:#4A3A46">For Canadians starting late</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg><div>Instant download<small>Ready when you check out</small></div></div>
+    <div class="item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/><path d="M14 6l3 3"/></svg><div>Fillable PDFs<small>Type on screen, no software needed</small></div></div>
+    <div class="item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9V4h10v5M7 17H5a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-2"/><rect x="7" y="14" width="10" height="6"/></svg><div>Print-friendly<small>Designed to work in black and white</small></div></div>
+    <div class="item"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg><div>Made in Canada<small>Prices in Canadian dollars</small></div></div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="t"><div class="eyebrow">The workbooks</div><h2>Find the one for this season of your life</h2></div>
+      <div class="ctrls">
+        <div class="count" id="count" aria-live="polite">1 / 6</div>
+        <button class="arrow" id="prev" type="button" aria-label="Previous workbook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="arrow next" id="next" type="button" aria-label="Next workbook"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+
+    <div class="viewport" id="viewport">
+      <div class="track" id="track">
+
+        <article class="slide">
+          <div class="cover-wrap"><div class="cover" style="--bg:#4B2E44;--fg:#F4EFE4;--ac:#C79A4B;--edge:#4B2E44"><div class="k">Great North Notes</div><div class="t">The Grocery Spending Reset</div><div><div class="r"></div><div class="s">Spend on purpose</div></div></div></div>
+          <div class="details">
+            <div class="eyebrow">Money</div>
+            <h3>The Grocery Spending Reset</h3>
+            <p>Find the leaks in your food spending and spend intentionally, without giving up the things you enjoy. This is the system I use myself.</p>
+            <ul class="facts"><li>Find where your grocery money quietly goes</li><li>Keep the foods you love</li><li>Built from a method that has kept me out of debt</li></ul>
+            <div><a class="btn btn-plum" href="https://greatnorthnotes.etsy.com">View on Etsy</a></div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="cover-wrap"><div class="cover" style="--bg:#F4EFE4;--fg:#4B2E44;--ac:#C79A4B;--edge:#C79A4B"><div class="k">Great North Notes</div><div class="t">The Retirement Reset</div><div><div class="r"></div><div class="s">For Canadians starting late</div></div></div></div>
+          <div class="details">
+            <div class="eyebrow">Retirement</div>
+            <h3>The Retirement Reset</h3>
+            <p>A no-judgment guide to starting late, catching up, and building the retirement you still have time to create.</p>
+            <ul class="facts"><li>115 pages, built as a fillable PDF</li><li>Written for Canadians: CPP, OAS, RRSP and TFSA</li><li>A 30-day reset plus a 15-section master workbook</li></ul>
+            <div><a class="btn btn-plum" href="https://greatnorthnotes.etsy.com">View on Etsy</a></div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="cover-wrap"><div class="cover" style="--bg:#2A1B27;--fg:#F4EFE4;--ac:#C79A4B;--edge:#2A1B27"><div class="k">Great North Notes</div><div class="t">Downsizing &amp; Decluttering Workbook</div><div><div class="r"></div><div class="s">Room by room</div></div></div></div>
+          <div class="details">
+            <div class="eyebrow">Home</div>
+            <h3>Downsizing &amp; Decluttering Workbook</h3>
+            <p>Decide what to keep, sell, donate or let go, based on what you need for your next chapter instead of what you happen to own.</p>
+            <ul class="facts"><li>Sorting, selling and donating decisions</li><li>Room-by-room structure</li><li>Built around your next chapter</li></ul>
+            <div><a class="btn btn-plum" href="https://greatnorthnotes.etsy.com">View on Etsy</a></div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="cover-wrap"><div class="cover" style="--bg:#E9DFD9;--fg:#4B2E44;--ac:#8A6A2E;--edge:#4B2E44"><div class="k">Great North Notes</div><div class="t">My Health Journey</div><div><div class="r"></div><div class="s">A personal health and treatment journal</div></div></div></div>
+          <div class="details">
+            <div class="eyebrow">Health</div>
+            <h3>My Health Journey</h3>
+            <p>One place for the details you need at appointments, with calm, clear pages and room to write.</p>
+            <ul class="facts"><li>33-page fillable journal</li><li>Medications, symptoms, labs and appointments</li><li>Pages you can print and bring to the doctor</li></ul>
+            <div><a class="btn btn-plum" href="https://greatnorthnotes.etsy.com">View on Etsy</a></div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="cover-wrap"><div class="cover" style="--bg:#6A4560;--fg:#F4EFE4;--ac:#E3C58A;--edge:#6A4560"><div class="k">Great North Notes</div><div class="t">Family Tree &amp; Heritage Journal</div><div><div class="r"></div><div class="s">Keep the stories</div></div></div></div>
+          <div class="details">
+            <div class="eyebrow">Family</div>
+            <h3>Family Tree &amp; Heritage Journal</h3>
+            <p>A printable journal for recording your family history while the people and stories are still within reach.</p>
+            <ul class="facts"><li>A printable genealogy and family history journal</li><li>Room for the stories, not only names and dates</li><li>Print it and fill it in at your own pace</li></ul>
+            <div><a class="btn btn-plum" href="https://greatnorthnotes.etsy.com">View on Etsy</a></div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="cover-wrap"><div class="cover" style="--bg:#C79A4B;--fg:#2A1B27;--ac:#4B2E44;--edge:#C79A4B"><div class="k">Great North Notes</div><div class="t" style="font-size:28px">Use-It-Up: The Household Consumption Challenge</div><div><div class="r"></div><div class="s">Use what you own</div></div></div></div>
+          <div class="details">
+            <div class="eyebrow">Home and money</div>
+            <h3>Use-It-Up: The Household Consumption Challenge</h3>
+            <p>Finish what is already in your home before you buy the replacement. A simple challenge that saves money and clears space.</p>
+            <ul class="facts"><li>Nine categories to inventory, from pantry to craft supplies</li><li>A 30, 60 and 90 day system with weekly check-ins</li><li>A Don&rsquo;t Buy It Yet rule card</li></ul>
+            <div><a class="btn btn-plum" href="https://greatnorthnotes.etsy.com">View on Etsy</a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab" type="button">The Grocery Spending Reset</button>
+      <button class="tab" type="button">The Retirement Reset</button>
+      <button class="tab" type="button">Downsizing &amp; Decluttering Workbook</button>
+      <button class="tab" type="button">My Health Journey</button>
+      <button class="tab" type="button">Family Tree &amp; Heritage Journal</button>
+      <button class="tab" type="button">Use-It-Up</button>
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="videos on-dark">
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow">Watch</div>
+      <h2>See inside before you buy</h2>
+      <p>Short screen-recorded tours of each workbook, page by page. New videos are on the way, so subscribe to be there when they land.</p>
+    </div>
+    <div class="vgrid">
+      <a class="player" href="https://youtube.com/@GreatNorthNotes">
+        <div class="in">
+          <svg width="84" height="84" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40" fill="#C79A4B"/><path d="M34 27l25 15-25 15z" fill="#2A1B27"/></svg>
+          <div class="vt">The Grocery Spending Reset: full walkthrough</div>
+          <div class="vs">First video coming soon on YouTube</div>
+        </div>
+      </a>
+      <div class="upnext">
+        <div class="eyebrow gold lab">Coming up</div>
+        <div class="row"><div><b>The Retirement Reset, first look</b><span class="n">How the 30-day plan works</span></div><span class="chip">Soon</span></div>
+        <div class="row"><div><b>My Health Journey, page tour</b><span class="n">Tracking appointments and medications</span></div><span class="chip">Soon</span></div>
+        <div class="row"><div><b>Use-It-Up challenge, how to start</b><span class="n">The 30, 60 and 90 day system</span></div><span class="chip">Soon</span></div>
+        <div class="foot"><a class="btn btn-gold" href="https://youtube.com/@GreatNorthNotes">Subscribe on YouTube</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2 style="margin-top:10px">Three steps from checkout to done</h2>
+    <div class="cards">
+      <div class="step"><div class="n">1</div><div class="h">Pick your workbook</div><p>Choose the one that fits where you are right now.</p></div>
+      <div class="step"><div class="n">2</div><div class="h">Download instantly</div><p>Buy on Etsy and your files are ready as soon as you check out.</p></div>
+      <div class="step"><div class="n">3</div><div class="h">Fill it in or print it</div><p>Type into the fillable PDF on screen, or print the pages and write by hand.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="l">
+      <div class="eyebrow">About</div>
+      <h2>Built from real life</h2>
+      <p>Great North Notes is a small Canadian shop. Every workbook started as a problem in my own life. I built a system, it worked, and now it&rsquo;s a workbook you can use too.</p>
+      <p>You won&rsquo;t find trends or filler here. You&rsquo;ll find clear steps, plenty of room to write, and no judgment about where you&rsquo;re starting from.</p>
+    </div>
+    <div class="r">
+      <div class="val"><b>Calm</b><span>Quiet layouts with room to think.</span></div>
+      <div class="val"><b>Direct</b><span>Here is what to do and why it matters.</span></div>
+      <div class="val"><b>Respectful</b><span>Written for adults who are figuring it out.</span></div>
+      <div class="val"><b>Print-friendly</b><span>Pages are designed to work in black and white.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Questions</h2>
+    <div class="faq">
+      <div><h3>What do I receive?</h3><p>Digital files only. After you check out on Etsy you can download your PDFs right away. Nothing is shipped.</p></div>
+      <div><h3>Can I fill it in on my computer or tablet?</h3><p>Many workbooks are fillable PDFs you can type into. Each Etsy listing says what is included.</p></div>
+      <div><h3>Can I print it?</h3><p>Yes. Print as many copies as you need for your own use.</p></div>
+      <div><h3>Do you make custom workbooks?</h3><p>Not at this time. The shop sells ready-made workbooks only.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="t"><h2>Start with the workbook that fits where you are.</h2><p>Every product is a one-time purchase and an instant download.</p></div>
+    <a class="btn btn-gold" href="https://greatnorthnotes.etsy.com" style="padding:16px 34px">Shop on Etsy</a>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="about-f">
+      <a class="brand" href="#top"><span class="mono" style="width:34px;height:34px;font-size:15px">GN</span><span class="name" style="font-size:19px">Great North Notes</span></a>
+      <p>Proven systems for real life. Printable workbooks and trackers, made in Canada.</p>
+    </div>
+    <div class="cols">
+      <div class="col"><h4>Shop</h4><a href="https://greatnorthnotes.etsy.com">Etsy shop</a><a href="#products">Workbooks</a><a href="#how">How it works</a></div>
+      <div class="col"><h4>Follow</h4><a href="https://instagram.com/greatnorthnotes">Instagram</a><a href="https://facebook.com/greatnorthnotes">Facebook</a><a href="https://youtube.com/@GreatNorthNotes">YouTube</a></div>
+      <div class="col"><h4>Contact</h4><span>greatnorthnotesshop@gmail.com</span></div>
+    </div>
+  </div>
+  <div class="wrap legal">&copy; <span id="yr">2026</span> Great North Notes. All rights reserved.</div>
+</footer>
+
+<script>
+(function(){
+  var track=document.getElementById('track');
+  var slides=Array.prototype.slice.call(track.children);
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('#tabs .tab'));
+  var count=document.getElementById('count');
+  var N=slides.length, i=0;
+  function go(n){
+    i=(n+N)%N;
+    track.style.transform='translateX(-'+(i*100)+'%)';
+    slides.forEach(function(s,k){
+      if(k===i){s.removeAttribute('inert');s.setAttribute('aria-hidden','false');}
+      else{s.setAttribute('inert','');s.setAttribute('aria-hidden','true');}
+    });
+    tabs.forEach(function(t,k){
+      t.classList.toggle('on',k===i);
+      t.setAttribute('aria-current',k===i?'true':'false');
+    });
+    count.textContent=(i+1)+' / '+N;
+  }
+  document.getElementById('prev').addEventListener('click',function(){go(i-1)});
+  document.getElementById('next').addEventListener('click',function(){go(i+1)});
+  tabs.forEach(function(t,k){t.addEventListener('click',function(){go(k)})});
+  var vp=document.getElementById('viewport'), x0=null;
+  vp.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  vp.addEventListener('touchend',function(e){
+    if(x0===null)return;
+    var dx=e.changedTouches[0].clientX-x0; x0=null;
+    if(Math.abs(dx)>50){go(dx<0?i+1:i-1)}
+  },{passive:true});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  go(0);
+})();
+</script>
+</body>
+</html>
